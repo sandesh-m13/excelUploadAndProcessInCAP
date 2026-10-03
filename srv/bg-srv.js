@@ -28,8 +28,15 @@ export class BoardGamesHandler extends cds.ApplicationService {
         ageRating
       }));
 
-      for(const entry of entries) await INSERT.into(BoardGames).entries(entry);
+      for (const entry of entries) await INSERT.into(BoardGames).entries(entry);
       return next();      //for .on handler returning next() is imp because we are overriding the standard flow.
+    })
+
+    this.after('READ', BoardGames, async (boardgames) => {
+      for (const boardgame of boardgames) {
+        boardgame.isbelow60 = boardgame.playTimeMinutes < 60;  //setting true/false to virtual field
+      }
+
     })
 
     return super.init()
