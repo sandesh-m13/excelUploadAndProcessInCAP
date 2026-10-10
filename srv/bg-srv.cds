@@ -10,4 +10,5 @@ service BoardGamesHandler {
 }
 
 annotate BoardGamesHandler.Files with @odata.draft.enabled;
+annotate BoardGamesHandler.BoardGames with @odata.draft.enabled;
 

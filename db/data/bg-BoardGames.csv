@@ -1,1 +1,11 @@
 ID,name,price,players,playTimeMinutes,ageRating,under60Min
+550e8400-e29b-41d4-a716-446655440001,Ticket to Ride,39.99,"2-5",45,8+,Game time less than 60 mins
+550e8400-e29b-41d4-a716-446655440002,Catan,44.99,"3-4",90,10+,Game time 60 mins or more
+550e8400-e29b-41d4-a716-446655440003,Pandemic,37.99,"2-4",45,8+,Game time less than 60 mins
+550e8400-e29b-41d4-a716-446655440004,Carcassonne,34.99,"2-5",35,7+,Game time less than 60 mins
+550e8400-e29b-41d4-a716-446655440005,Azul,39.99,"2-4",30,8+,Game time less than 60 mins
+550e8400-e29b-41d4-a716-446655440006,Wingspan,54.99,"1-5",70,10+,Game time 60 mins or more
+550e8400-e29b-41d4-a716-446655440007,Scythe,79.99,"1-5",115,14+,Game time 60 mins or more
+550e8400-e29b-41d4-a716-446655440008,Gloomhaven,129.99,"1-4",120,14+,Game time 60 mins or more
+550e8400-e29b-41d4-a716-446655440009,7 Wonders,34.99,"2-7",30,10+,Game time less than 60 mins
+550e8400-e29b-41d4-a716-446655440010,Terraforming Mars,69.99,"1-5",120,12+,Game time 60 mins or more

@@ -2,8 +2,8 @@ using BoardGamesHandler as service from '../../srv/bg-srv';
 
 annotate service.BoardGames with @(
     UI.FieldGroup #GeneratedGroup: {
-        $Type: 'UI.FieldGroupType',
-        Data : [
+        $Type                              : 'UI.FieldGroupType',
+        Data                               : [
             {
                 $Type: 'UI.DataField',
                 Label: 'name',
@@ -36,6 +36,16 @@ annotate service.BoardGames with @(
                 @UI.Hidden: {$edmJson: {$Not: [{$Path: 'isbelow60'}]}}, //virtual field based hiding
             },
         ],
+        Common.SideEffects #PlayTimeChanges: { //sideeffect to update field automatically without app refresh
+            $Type           : 'Common.SideEffectsType',
+            SourceProperties: 'playTimeMinutes',
+            //we can pass source entities, events as well
+            SourceEntities: 'BoardGames',
+            TargetProperties: 'under60Min',
+        //we can pass target entitied as well to update
+
+
+        },
     },
     UI.Facets                    : [{
         $Type : 'UI.ReferenceFacet',
@@ -71,3 +81,4 @@ annotate service.BoardGames with @(
         },
     ],
 );
+
